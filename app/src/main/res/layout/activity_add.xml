@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#41a3f5">
+
+        <TextView
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="添加账号"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <com.sikefeng.tongxuelu.widgets.ClearEditText
+            android:id="@+id/edit_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="标题" />
+        <com.sikefeng.tongxuelu.widgets.ClearEditText
+            android:id="@+id/edit_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="内容" />
+        <com.sikefeng.tongxuelu.widgets.ClearEditText
+            android:id="@+id/edit_account"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="图片" />
+
+        <com.sikefeng.tongxuelu.widgets.ClearEditText
+            android:id="@+id/edit_passwd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="网址" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:onClick="OnSave"
+            android:text="保存" />
+
+    </LinearLayout>
+</LinearLayout>

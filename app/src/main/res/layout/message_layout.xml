@@ -1,0 +1,380 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <com.sikefeng.tongxuelu.widgets.MyScrollView
+        android:id="@+id/mScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp" >
+
+                <com.sikefeng.tongxuelu.widgets.RoundImageView
+                    android:id="@+id/head"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_contact_picture_holo" />
+
+                <TextView
+                    android:id="@+id/touname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/head"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="白玉梁"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/msg_subject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:shadowColor="#3399FF"
+                        android:shadowDx="0"
+                        android:shadowDy="3"
+                        android:shadowRadius="2"
+                        android:text="教学科目: "
+                        android:textColor="#3333FF"
+                        android:textStyle="italic" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/msg_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:shadowColor="#3399FF"
+                                android:shadowDx="0"
+                                android:shadowDy="3"
+                                android:shadowRadius="2"
+                                android:text="姓名: "
+                                android:textColor="#3333FF"
+                                android:textStyle="italic" />
+
+                            <TextView
+                                android:id="@+id/msg_nickname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:shadowColor="#0099FF"
+                                android:shadowDx="0"
+                                android:shadowDy="3"
+                                android:shadowRadius="2"
+                                android:text="绰号: "
+                                android:textColor="#3333FF"
+                                android:textStyle="italic" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="20dp" >
+
+                            <TextView
+                                android:id="@+id/msg_sex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:shadowColor="#3399FF"
+                                android:shadowDx="0"
+                                android:shadowDy="3"
+                                android:shadowRadius="2"
+                                android:text="性别: "
+                                android:textColor="#3333FF"
+                                android:textStyle="italic" />
+
+                            <TextView
+                                android:id="@+id/msg_age"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:shadowColor="#3399FF"
+                                android:shadowDx="0"
+                                android:shadowDy="3"
+                                android:shadowRadius="2"
+                                android:text="年龄: "
+                                android:textColor="#3333FF"
+                                android:textStyle="italic" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="20dp" >
+
+                            <TextView
+                                android:id="@+id/msg_qq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:shadowColor="#3399FF"
+                                android:shadowDx="0"
+                                android:shadowDy="3"
+                                android:shadowRadius="2"
+                                android:text="QQ: "
+                                android:textColor="#3333FF"
+                                android:textStyle="italic" />
+
+                            <TextView
+                                android:id="@+id/msg_birthday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:shadowColor="#3399FF"
+                                android:shadowDx="0"
+                                android:shadowDy="3"
+                                android:shadowRadius="2"
+                                android:text="生日: "
+                                android:textColor="#3333FF"
+                                android:textStyle="italic" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="20dp" >
+
+                            <TextView
+                                android:id="@+id/msg_constallation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:shadowColor="#3399FF"
+                                android:shadowDx="0"
+                                android:shadowDy="3"
+                                android:shadowRadius="2"
+                                android:text="星座: "
+                                android:textColor="#3333FF"
+                                android:textStyle="italic" />
+
+                            <TextView
+                                android:id="@+id/msg_bloodtype"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:shadowColor="#3399FF"
+                                android:shadowDx="0"
+                                android:shadowDy="3"
+                                android:shadowRadius="2"
+                                android:text="血型: "
+                                android:textColor="#3333FF"
+                                android:textStyle="italic" />
+                        </TableRow>
+
+                        <TextView
+                            android:id="@+id/msg_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:shadowColor="#3399FF"
+                            android:shadowDx="0"
+                            android:shadowDy="3"
+                            android:shadowRadius="2"
+                            android:text="邮箱: "
+                            android:textColor="#3333FF"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/msg_dream"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:shadowColor="#3399FF"
+                            android:shadowDx="0"
+                            android:shadowDy="3"
+                            android:shadowRadius="2"
+                            android:text="梦想: "
+                            android:textColor="#3333FF"
+                            android:textStyle="italic" />
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/msg_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:shadowColor="#3399FF"
+                        android:shadowDx="0"
+                        android:shadowDy="3"
+                        android:shadowRadius="2"
+                        android:text="所在地: "
+                        android:textColor="#3333FF"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/msg_hobby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:shadowColor="#3399FF"
+                        android:shadowDx="0"
+                        android:shadowDy="3"
+                        android:shadowRadius="2"
+                        android:text="兴趣爱好: "
+                        android:textColor="#3333FF"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/msg_phonoNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:shadowColor="#3399FF"
+                        android:shadowDx="0"
+                        android:shadowDy="3"
+                        android:shadowRadius="2"
+                        android:text="手机号码: "
+                        android:textColor="#3333FF"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/msg_motto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:shadowColor="#3399FF"
+                        android:shadowDx="0"
+                        android:shadowDy="3"
+                        android:shadowRadius="2"
+                        android:text="人生格言: "
+                        android:textColor="#3333FF"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/msg_beststar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:shadowColor="#3399FF"
+                        android:shadowDx="0"
+                        android:shadowDy="3"
+                        android:shadowRadius="2"
+                        android:text="最喜欢的明星: "
+                        android:textColor="#3333FF"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/msg_bestSports"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:shadowColor="#3399FF"
+                        android:shadowDx="0"
+                        android:shadowDy="3"
+                        android:shadowRadius="2"
+                        android:text="最喜欢的运动: "
+                        android:textColor="#3333FF"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/msg_bestColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:shadowColor="#3399FF"
+                        android:shadowDx="0"
+                        android:shadowDy="3"
+                        android:shadowRadius="2"
+                        android:text="最喜欢的颜色: "
+                        android:textColor="#3333FF"
+                        android:textStyle="italic" />
+
+                    <com.sikefeng.tongxuelu.widgets.MyGridView
+                        android:id="@+id/child_grid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:columnWidth="90dip"
+                        android:gravity="center"
+                        android:horizontalSpacing="5dip"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="auto_fit"
+                        android:padding="5dip"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="5dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.sikefeng.tongxuelu.widgets.MyScrollView>
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="70dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_sava"
+            android:text="编辑"
+           android:textColor="#18B4ED"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/back_arrow"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:text="好友资料"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

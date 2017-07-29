@@ -1,0 +1,96 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_frame_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:background="@mipmap/ic_launcher"
+            android:onClick="OpenRightMenu"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f5f3f3"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/main_tab_group"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom"
+                android:background="@android:color/transparent"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/main_tab_addExam"
+                    style="@style/RadioButtonStyle"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:checked="true"
+                    android:drawableTop="@drawable/bg_checkbox_icon_menu_0"
+                    android:text="主页"
+                    android:textColor="@drawable/radiobutton_text_color" />
+
+                <RadioButton
+                    android:id="@+id/main_tab_myExam"
+                    style="@style/RadioButtonStyle"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/bg_checkbox_icon_menu_1"
+                    android:text="联系人"
+                    android:textColor="@drawable/radiobutton_text_color" />
+
+                <RadioButton
+                    android:id="@+id/main_tab_settings"
+                    style="@style/RadioButtonStyle"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/bg_checkbox_icon_menu_3"
+                    android:text="我的"
+                    android:textColor="@drawable/radiobutton_text_color" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_tabs"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/id_left_menu"
+        android:name="com.sikefeng.tongxuelu.activity.fragmentmenu.MenuLeftFragment"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:tag="LEFT" />
+
+    <fragment
+        android:id="@+id/id_right_menu"
+        android:name="com.sikefeng.tongxuelu.activity.fragmentmenu.MenuRightFragment"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:tag="RIGHT" />
+
+</android.support.v4.widget.DrawerLayout>

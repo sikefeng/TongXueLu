@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- <corners android:radius="90px" /> -->
+
+    <solid android:color="#ffC9CACB" />
+
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/whiteGray" />
+    <!-- 字体与边框的间距 -->
+    <padding
+        android:bottom="5dp"
+        android:left="15dp"
+        android:right="15dp"
+        android:top="5dp" />
+
+</shape>

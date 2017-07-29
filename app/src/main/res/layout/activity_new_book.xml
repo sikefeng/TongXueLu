@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#41a3f5">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:drawableLeft="@drawable/back_seletor"
+            android:gravity="center_vertical"
+            android:text="返回"
+            android:textColor="@drawable/text_white_blue"
+            android:textSize="20sp" />
+
+        <com.sikefeng.tongxuelu.widgets.ClearEditText
+            android:id="@+id/edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:hint="标题"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ff333333"
+            android:textColorHint="#7F7F7F"
+            android:textSize="15sp"
+            android:layout_marginRight="50dp"
+            android:layout_toRightOf="@id/tv_back"
+            android:background="@drawable/input_background" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:paddingRight="10dp"
+            android:text="保存"
+            android:textColor="@drawable/text_white_blue"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <!--<com.sikefeng.tongxuelu.diray.LineEditText-->
+    <EditText
+        android:id="@+id/edit_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:hint="请输入内容："
+        android:lineSpacingExtra="12dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@null"
+        android:gravity="top" />
+</LinearLayout>

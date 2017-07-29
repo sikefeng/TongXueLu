@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/bar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="5dip"
+        android:max="100"
+        android:progressDrawable="@drawable/barcolor"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="#41a3f5">
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:drawableLeft="@drawable/back_seletor"
+                android:gravity="center_vertical"
+                android:text="返回"
+                android:textColor="@drawable/text_white_blue"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="在浏览器中打开"
+                android:textAllCaps="true"
+                android:background="@android:color/transparent"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:paddingRight="5dp"
+                android:textColor="@android:color/white"
+                 />
+        </RelativeLayout>
+
+        <WebView
+            android:id="@+id/web"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/relativeLayout_title"></WebView>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="@mipmap/line" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f2f2f2"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_item"
+                android:src="@mipmap/left" />
+
+            <ImageButton
+                android:id="@+id/go"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_item"
+                android:src="@mipmap/right" />
+
+            <ImageButton
+                android:id="@+id/caidan"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_item"
+                android:src="@mipmap/menu_icon" />
+
+            <ImageButton
+                android:id="@+id/zhuye"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_item"
+                android:src="@mipmap/home_icon" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

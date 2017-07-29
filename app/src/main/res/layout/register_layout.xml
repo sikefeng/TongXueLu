@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_ba"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#41a3f5">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:drawableLeft="@drawable/back_arrow_press"
+            android:text="同学录"
+            android:textColor="@color/whiteGray"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/savamess"
+            android:layout_width="70dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_sava"
+            android:text="保存"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <com.sikefeng.tongxuelu.widgets.RoundImageView
+            android:id="@+id/headview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_contact_picture_holo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="头像"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:id="@+id/scrollView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:id="@+id/subject_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/subject_tv0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="教学科目: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/subject_edit"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/subject_tv0"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="230dp"
+                                android:singleLine="true" />
+
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/subject_edit"
+                                android:layout_below="@id/subject_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="姓名: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/name_edit"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv1"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="230dp"
+                                android:singleLine="true" />
+
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv1"
+                                android:layout_below="@id/name_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearlayout_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:visibility="gone"
+                            android:layout_marginTop="25dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="分类: " />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroup_category"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radio_teacher"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:button="@drawable/checkbox_bg"
+                                    android:text="老师"
+                                    android:textColor="@drawable/text_blue" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_classmate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:button="@drawable/checkbox_bg"
+                                    android:text="同学"
+                                    android:checked="true"
+                                    android:textColor="@drawable/text_blue" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_friends"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:button="@drawable/checkbox_bg"
+                                    android:text="朋友"
+                                    android:textColor="@drawable/text_blue" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="性别: " />
+
+                            <RadioGroup
+                                android:id="@+id/SexradioGroup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radio_boy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:button="@drawable/checkbox_bg"
+                                    android:checked="true"
+                                    android:text="男"
+                                    android:textColor="@drawable/text_blue" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_girl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:button="@drawable/checkbox_bg"
+                                    android:text="女"
+                                    android:textColor="@drawable/text_blue" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="年龄: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/age_edit"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv2"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="230dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv2"
+                                android:layout_below="@id/age_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="QQ:" />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/qq_edit"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv3"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="230dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv3"
+                                android:layout_below="@id/qq_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="生日: " />
+
+                            <TextView
+                                android:id="@+id/tv_birthday"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv4"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="230dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv4"
+                                android:layout_below="@id/tv_birthday"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="星座: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/constallation_edit"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv5"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="230dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv5"
+                                android:layout_below="@id/constallation_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="血型: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/bloodtype_edit"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv6"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="230dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv6"
+                                android:layout_below="@id/bloodtype_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="邮箱: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/email_edit"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv7"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="230dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv7"
+                                android:layout_below="@id/email_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="绰号: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/nickname_edit"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv8"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="230dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv8"
+                                android:layout_below="@id/nickname_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="梦想: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/dream_edit"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="230dp" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv"
+                                android:layout_below="@id/dream_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="所在地: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/address_edit"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv9"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="230dp" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv9"
+                                android:layout_below="@id/address_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="兴趣爱好: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/hobby_edit"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv10"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="230dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv10"
+                                android:layout_below="@id/hobby_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/contact_bg"
+                                android:text="手机号码: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/phono_edit"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv11"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="150dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv11"
+                                android:layout_below="@id/phono_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="人生格言: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/motto_edit"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv12"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="300dp" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv12"
+                                android:layout_below="@id/motto_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="最喜欢的明星: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/best_star_edit"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv13"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="150dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv13"
+                                android:layout_below="@id/best_star_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="最喜欢的颜色: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/best_color_edit"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv14"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="150dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv14"
+                                android:layout_below="@id/best_color_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/name_tv15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="最喜欢的运动: " />
+
+                            <com.sikefeng.tongxuelu.widgets.ClearEditText
+                                android:id="@+id/best_sport_edit"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/name_tv15"
+                                android:background="@android:color/transparent"
+                                android:maxWidth="150dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_alignLeft="@id/name_tv15"
+                                android:layout_below="@id/best_sport_edit"
+                                android:layout_marginRight="20dp"
+                                android:background="@color/whiteGray" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/add_picture"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                            android:drawableBottom="@drawable/add_new_pic"
+                            android:text="相册"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <com.sikefeng.tongxuelu.widgets.MyGridView
+                            android:id="@+id/child_grid"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:cacheColorHint="@android:color/transparent"
+                            android:columnWidth="90dip"
+                            android:gravity="center"
+                            android:horizontalSpacing="5dip"
+                            android:listSelector="@android:color/transparent"
+                            android:numColumns="auto_fit"
+                            android:padding="5dip"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="5dip" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

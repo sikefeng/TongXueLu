@@ -1,0 +1,12 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.tongxuelu.multipleimages.MyImageView
+        android:id="@+id/child_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:scaleType="fitXY"
+        android:background="@drawable/friends_sends_pictures_no" />
+</RelativeLayout>
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tongxuelu.activity.user.ForgetPasswdActicity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#41a3f5">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:drawableLeft="@drawable/back_seletor"
+            android:gravity="center_vertical"
+            android:text="返回"
+            android:textColor="@drawable/text_white_blue"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="找回密码"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/login_progress"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="24dip"
+        android:paddingRight="24dip">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/login_img" />
+
+        <com.sikefeng.tongxuelu.widgets.ClearEditText
+            android:id="@+id/email_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="44.6dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dip"
+            android:background="@drawable/demo_account_text_bg"
+            android:drawableLeft="@drawable/icon_email"
+            android:drawablePadding="18dip"
+            android:gravity="center_vertical"
+            android:hint="请输入注册邮箱"
+            android:inputType="textEmailSubject"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip"
+            android:singleLine="true"
+            android:textColor="#ff333333"
+            android:textColorHint="#7F7F7F"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login_update"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_below="@+id/password"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/blue_btn_bg"
+        android:text="确认"
+        android:onClick="updatePassword"
+        android:textColor="@drawable/text_white_blue"
+        android:textSize="18sp" />
+</LinearLayout>

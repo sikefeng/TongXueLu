@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/bg_list_item">
+
+    <ImageView
+        android:id="@+id/index_img"
+        android:layout_width="120dip"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/addimage" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff333333"
+        android:layout_toRightOf="@id/index_img"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_text"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/index_img"
+        android:maxLines="3"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:textColor="@drawable/contact_list_item_buddy_signature_text_color2"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/checkbox"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:button="@drawable/bg_heart"
+        android:paddingRight="5dip" />
+</RelativeLayout>

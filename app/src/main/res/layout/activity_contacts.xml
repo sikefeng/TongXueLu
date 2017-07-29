@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#41a3f5">
+
+        <ImageView
+            android:id="@+id/roundImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/title_index" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="联系人"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/add_icon" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/id_swipe_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/relativeLayout">
+
+            <ExpandableListView
+                android:id="@+id/expandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:groupIndicator="@null"
+                android:scrollbars="none"
+                android:smoothScrollbar="true" />
+            <!--<com.tongxuelu.widgets.RefreshExpandableListView
+                android:id="@+id/expandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:groupIndicator="@null"
+                android:scrollbars="none"
+                android:smoothScrollbar="true" />
+    -->
+            <RelativeLayout
+                android:id="@+id/group_item_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/list_group_item_background"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/group_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="14.0dip"
+                    android:contentDescription="@null"
+                    android:scaleType="center" />
+
+                <TextView
+                    android:id="@+id/group_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="44.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_toLeftOf="@+id/tv_count"
+                    android:ellipsize="end"
+                    android:gravity="left|center"
+                    android:includeFontPadding="false"
+                    android:maxEms="11"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="#ff333333"
+                    android:textSize="15.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="50dip"
+                    android:layout_height="50.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10.0dip"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="#ff929292"
+                    android:textSize="12.0sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+          <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView
+              xmlns:ptr="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/expand_list"
+              android:layout_width="fill_parent"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_height="fill_parent"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="30dp"
+              android:cacheColorHint="#00000000"
+              android:divider="#cacbd1"
+              android:dividerHeight="0.5px"
+              android:fadingEdge="none"
+              android:scrollbars="none"
+              android:fastScrollEnabled="false"
+              android:footerDividersEnabled="true"
+              android:headerDividersEnabled="false"
+              android:smoothScrollbar="true"
+              ptr:ptrAnimationStyle="flip"
+              ptr:ptrDrawable="@drawable/default_ptr_flip"
+              ptr:ptrHeaderBackground="@drawable/ttt"
+              ptr:ptrHeaderTextColor="@color/white"
+             >
+          </com.handmark.pulltorefresh.library.PullToRefreshExpandableListView>
+    </LinearLayout>-->
+
+</LinearLayout>

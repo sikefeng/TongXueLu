@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#41a3f5">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/back_seletor"
+            android:gravity="center_vertical"
+            android:text="返回"
+            android:paddingLeft="5dp"
+            android:textColor="@color/whiteGray"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/download_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#778899"
+        android:dividerHeight="0.5dip" />
+
+
+</LinearLayout>

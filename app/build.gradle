@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        tongxuelu_config {
+            keyAlias 'sikefeng'
+            keyPassword 'android524456'
+            storeFile file('E:/MyTongXueLu/tongxuelu.jks')
+            storePassword 'android524456'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "25.0.0"
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    //防止图片使用报错kkkkkkkkkkkkkkkkkkkkkkk
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    //防止图片使用报错kkkkkkkkkkkkkkkkkkkkkkk
+    defaultConfig {
+        applicationId 'com.sikefeng.tongxuelu'
+        minSdkVersion 18
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.tongxuelu_config
+        }
+        debug {
+            signingConfig signingConfigs.tongxuelu_config
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/BmobSDK_V3.4.6_0415.jar')
+    compile files('libs/okhttp-2.4.0.jar')
+    compile files('libs/okio-1.4.0.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/filechoose.jar')
+    compile files('libs/photoview-library-1.2.2.jar')
+    compile files('libs/SwitchLayout1.0.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile project(':library')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/gson-2.2.2.jar')
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'cn.yipianfengye.android:zxing-library:1.5'
+    //二维码
+    compile 'com.android.support:support-v4:20.+'
+    compile files('libs/slidingmenu_library.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+}

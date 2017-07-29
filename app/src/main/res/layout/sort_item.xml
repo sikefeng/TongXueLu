@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/catalog"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_gravity="center_vertical"
+        android:background="#E0E0E0"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:text="A"
+        android:textSize="18sp"
+        android:textColor="#454545" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/bg_list_item"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_centerVertical="true"
+            android:text="hhhh"
+            android:textColor="#336598" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/whiteGray" />
+    </RelativeLayout>
+</LinearLayout>
+
+
+    <!--  <?xml version="1.0" encoding="utf-8"?>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="45dip"
+
+  android:descendantFocusability="blocksDescendants"
+  android:gravity="center_vertical"
+  android:orientation="vertical">
+
+  <TextView
+      android:id="@+id/catalog"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_weight="1.0"
+      android:background="#E0E0E0"
+      android:paddingBottom="5dip"
+      android:paddingLeft="10dip"
+      android:paddingTop="5dip"
+      android:text="A"
+      android:textColor="#454545" />
+
+  <TextView
+      android:id="@+id/title"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_gravity="center_vertical"
+      android:layout_marginLeft="10dip"
+      android:layout_weight="1.0"
+      android:gravity="center_vertical"
+      android:paddingBottom="10dip"
+      android:paddingTop="10dip"
+      android:text="hhhh"
+      android:textColor="#336598" />
+
+  <View
+      android:layout_width="fill_parent"
+      android:layout_height="0.5dip"
+      android:background="@color/whiteGray" />
+  </LinearLayout>-->

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#41a3f5" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="5dp"
+            android:drawableLeft="@drawable/back_seletor"
+            android:text="返回"
+            android:gravity="center_vertical"
+            android:textColor="@drawable/text_white_blue"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/settings"
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/menutop" />
+    </RelativeLayout>
+    <GridView
+        android:id="@+id/child_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:columnWidth="90dip"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:horizontalSpacing="5dip"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="auto_fit"
+        android:padding="5dip"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dip" >
+    </GridView>
+   <!-- <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn"
+            android:orientation="vertical" >
+
+            <com.android.tongxuelu.MyGridView
+                android:id="@+id/child_grid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@android:color/transparent"
+                android:columnWidth="90dip"
+                android:gravity="center"
+                android:horizontalSpacing="5dip"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="auto_fit"
+                android:padding="5dip"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dip" />
+        </LinearLayout>
+    </ScrollView>-->
+
+</LinearLayout>

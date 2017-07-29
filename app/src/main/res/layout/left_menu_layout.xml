@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <!-- border_outside_color 外部圆圈的颜色 -->
+                <!-- border_inside_color 内部部圆圈的颜色 -->
+                <!-- border_thickness 外圆和内圆的宽度 -->
+                <com.sikefeng.tongxuelu.widgets.RoundImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_gravity="center"
+                    imagecontrol:border_inside_color="#41a3f5"
+                    imagecontrol:border_outside_color="#41a3f5"
+                    imagecontrol:border_thickness="0.5dp"
+                    android:src="@drawable/ic_contact_picture_holo" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户名:"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout2"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/bt_diray"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#00000000"
+                    android:drawableRight="@drawable/mm_submenu"
+                    android:text="记事本"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/bt_share"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#00000000"
+                    android:drawableRight="@drawable/mm_submenu"
+                    android:text="应用共享"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+
+                <Button
+                    android:id="@+id/bt_refresh"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#00000000"
+                    android:layout_marginTop="5dp"
+                    android:drawableRight="@drawable/mm_submenu"
+                    android:text="软件更新"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+                <Button
+                    android:id="@+id/bt_baidu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#00000000"
+                    android:drawableRight="@drawable/mm_submenu"
+                    android:text="百度一下"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp" />
+
+
+
+                <Button
+                    android:id="@+id/bt_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/exit_btn"
+                    android:text="退出登录"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
